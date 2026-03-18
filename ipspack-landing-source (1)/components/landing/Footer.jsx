@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Download, Loader2 } from 'lucide-react';
-import { downloadSourceZip } from '@/utils/downloadSourceZip';
+import React from 'react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const QUICK_LINKS = [
   { label: 'Stand-up Pouches', href: '#products' },
@@ -19,13 +18,6 @@ const COMPANY_LINKS = [
 ];
 
 export default function Footer() {
-  const [downloading, setDownloading] = useState(false);
-
-  const handleDownload = async () => {
-    setDownloading(true);
-    await downloadSourceZip();
-    setDownloading(false);
-  };
   return (
     <footer className="bg-[#1B6B58] relative overflow-hidden">
       {/* Decorative shapes */}
@@ -123,14 +115,6 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a href="#" className="text-white/30 text-xs hover:text-[#00C9A7] transition-colors">Privacy Policy</a>
             <a href="#" className="text-white/30 text-xs hover:text-[#00C9A7] transition-colors">Terms of Service</a>
-            <button
-              onClick={handleDownload}
-              disabled={downloading}
-              className="flex items-center gap-2 bg-white/10 hover:bg-[#00C9A7]/20 border border-white/10 hover:border-[#00C9A7]/40 text-white/60 hover:text-[#00C9A7] text-xs px-4 py-2 rounded-full transition-all"
-            >
-              {downloading ? <Loader2 className="w-3 h-3 animate-spin" /> : <Download className="w-3 h-3" />}
-              Download Source Code
-            </button>
           </div>
         </div>
       </div>
