@@ -1,0 +1,21 @@
+{
+ "compilerOptions": {
+ "baseUrl": ".",
+ "paths": {
+  "@/*": ["./*"]
+ },
+ "jsx": "react-jsx",
+ "module": "esnext",
+ "moduleResolution": "bundler",
+ "lib": ["esnext", "dom"],
+ "target": "esnext",
+ "checkJs": true,
+ "skipLibCheck": true,
+ "allowSyntheticDefaultImports": true,
+ "esModuleInterop": true,
+ "resolveJsonModule": true,
+ "types": []
+ },
+ "include": ["components/**/*.js", "pages/**/*.jsx", "lib/**/*.js", "hooks/**/*.js", "api/**/*.js", "globals.css", "index.css", "App.jsx", "main.jsx", "pages.config.js", "src"],
+ "exclude": ["node_modules", "dist"]
+}
