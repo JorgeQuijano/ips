@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ipspack-landing-source\\ \\(1\\) && npm install && npm run build",
+  "outputDirectory": "ipspack-landing-source\\ \\(1\\)/dist",
+  "installCommand": "cd ipspack-landing-source\\ \\(1\\) && npm install"
+}
